@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webgriffe_ProductDelete>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Webgriffe_ProductDelete>
+    </modules>
+</config>

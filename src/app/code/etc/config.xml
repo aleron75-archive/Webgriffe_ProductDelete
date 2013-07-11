@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webgriffe_ProductDelete>
+            <version>1.0.0.</version>
+        </Webgriffe_ProductDelete>
+    </modules>
+
+    <global>
+        <models>
+            <wgproddel>
+                <class>Webgriffe_ProductDelete_Model</class>
+            </wgproddel>
+        </models>
+
+        <events>
+            <catalog_product_delete_commit_after>
+                <observers>
+                    <wgproddel_after_delete>
+                        <type>singleton</type>
+                        <class>Webgriffe_ProductDelete_Model_Observer</class>
+                        <method>onProductDeleteAfter</method>
+                    </wgproddel_after_delete>
+                </observers>
+            </catalog_product_delete_commit_after>
+        </events>
+    </global>
+</config>
